@@ -1,0 +1,21 @@
+sickrage:
+  image: ryanfox1985/docker-sickrage
+  ports:
+    - 8081:8081
+  volumes:
+   - ./sickrage/config:/config
+
+couchpotato:
+  image: ryanfox1985/docker-couchpotato
+  ports:
+    - 8082:5050
+  volumes:
+   - ./couchpotato/config:/config
+
+deluge:
+  image: aostanin/deluge
+  ports:
+    - 8112:8112
+    - 58846:58846
+  volumes:
+    - ./deluge/data:/data
