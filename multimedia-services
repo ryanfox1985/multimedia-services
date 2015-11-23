@@ -16,22 +16,12 @@ PATH=/usr/local/bin:/bin:/usr/bin
 DESC="Multimedia daemon"
 USER=fox
 
-[ -x "$DAEMON" ] || exit 0
-
-. /lib/lsb/init-functions
-
 case "$1" in
   start)
-    # master switch
-      log_daemon_msg "Starting $DESC"
-      cd /home/fox/multimedia-services; docker-compose up -d
-      log_end_msg $?
+      docker-compose -f /home/fox/multimedia-services/docker-compose.yml up -d
     ;;
   stop)
-    # master switch
-      log_daemon_msg "Stopping $DESC"
-      cd /home/fox/multimedia-services; docker-compose stop
-      log_end_msg $?
+      docker-compose -f /home/fox/multimedia-services/docker-compose.yml stop
     ;;
   reload|restart)
     $0 stop && $0 start
