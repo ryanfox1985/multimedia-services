@@ -4,6 +4,7 @@ sickrage:
     - 8081:8081
   volumes:
    - ./sickrage/config:/config
+  privileged: true
 
 couchpotato:
   image: ryanfox1985/docker-couchpotato
@@ -11,6 +12,7 @@ couchpotato:
     - 8082:5050
   volumes:
    - ./couchpotato/config:/config
+  privileged: true
 
 deluge:
   image: aostanin/deluge
