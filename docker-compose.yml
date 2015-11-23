@@ -6,6 +6,7 @@ sickrage:
    - ./sickrage/config:/config
    - ./sickrage/series:/series
   privileged: true
+  restart: always
 
 couchpotato:
   image: ryanfox1985/docker-couchpotato
@@ -14,6 +15,7 @@ couchpotato:
   volumes:
    - ./couchpotato/config:/config
   privileged: true
+  restart: always
 
 deluge:
   image: aostanin/deluge
@@ -22,3 +24,4 @@ deluge:
     - 58846:58846
   volumes:
     - ./deluge/data:/data
+  restart: always
