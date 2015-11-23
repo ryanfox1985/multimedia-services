@@ -24,4 +24,5 @@ deluge:
     - 58846:58846
   volumes:
     - ./deluge/data:/data
+    - ./deluge/downloads:/downloads
   restart: always
