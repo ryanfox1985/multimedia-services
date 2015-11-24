@@ -1,3 +1,12 @@
+sync:
+  image: bittorrent/sync
+  ports:
+    - 8888:8888
+  volumes:
+   - ./sync:/mnt/sync
+  privileged: true
+  restart: always
+
 sickrage:
   image: ryanfox1985/docker-sickrage
   ports:
