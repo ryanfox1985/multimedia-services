@@ -1,3 +1,8 @@
+inadyn:
+  image: ryanfox1985/docker-inadyn
+  volumes:
+    - ./inadyn/etc:/etc
+
 sync:
   image: bittorrent/sync
   ports:
