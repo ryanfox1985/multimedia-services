@@ -1,5 +1,5 @@
 inadyn:
-  image: ryanfox1985/docker-inadyn
+  image: ryanfox1985/docker-dynamicdns
   volumes:
     - ./ddclient/etc:/etc/ddclient
 
