@@ -1,7 +1,7 @@
 inadyn:
   image: ryanfox1985/docker-inadyn
   volumes:
-    - ./inadyn/etc:/etc
+    - ./ddclient/etc:/etc/ddclient
 
 sync:
   image: bittorrent/sync
