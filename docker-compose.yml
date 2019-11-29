@@ -13,12 +13,14 @@ sync:
   restart: always
 
 sickrage:
-  image: ryanfox1985/docker-sickrage
+  image: sickrage/sickrage
   ports:
     - 8081:8081
   volumes:
-   - ./sickrage/config:/config
-   - ./sickrage/series:/series
+    - ./sickrage/config:/config
+    - ./sickrage/series:/tv
+    - ./sickrage/anime:/anime
+    - ./sickrage/downloads:/downloads
   privileged: true
   restart: always
 
